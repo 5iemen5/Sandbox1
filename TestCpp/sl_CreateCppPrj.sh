@@ -68,22 +68,36 @@ cat << EOF > "$NAME/README.md"
 
 EOF
 
-# 6. Create build clearing scripts
-echo "Generating build removal scripts..."
+# 6. Create utility scripts
+echo "Generating utility scripts..."
+
+# Build removal scripts
 cat << 'EOF' > "$NAME/sl_remove_build.sh"
 #!/bin/bash
 rm -rf build
 mkdir build
 EOF
 
-# Make the Linux removal script executable by default
-chmod +x "$NAME/sl_remove_build.sh"
-
 cat << 'EOF' > "$NAME/sw_remove_build.bat"
 @echo off
 if exist build rd /s /q build
 mkdir build
 EOF
+
+# Project opening scripts
+cat << 'EOF' > "$NAME/sl_OpenPrj.sh"
+#!/bin/bash
+code src/main.cpp include/main.h CMakeLists.txt
+EOF
+
+cat << 'EOF' > "$NAME/sw_OpenPrj.bat"
+@echo off
+code src/main.cpp include/main.h CMakeLists.txt
+EOF
+
+# Make the Linux scripts executable by default
+chmod +x "$NAME/sl_remove_build.sh"
+chmod +x "$NAME/sl_OpenPrj.sh"
 
 echo
 echo "Project \"$NAME\" created successfully!"

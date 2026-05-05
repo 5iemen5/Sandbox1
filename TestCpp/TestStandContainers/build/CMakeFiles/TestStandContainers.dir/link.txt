@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\TestStandContainers.dir/objects.a
+C:\Users\user\Downloads\w64devkit\w64devkit\bin\ar.exe qc CMakeFiles\TestStandContainers.dir/objects.a @CMakeFiles\TestStandContainers.dir\objects1.rsp
+C:\Users\user\Downloads\w64devkit\w64devkit\bin\g++.exe -Wl,--whole-archive CMakeFiles\TestStandContainers.dir/objects.a -Wl,--no-whole-archive -o TestStandContainers.exe -Wl,--out-implib,libTestStandContainers.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TestStandContainers.dir\linkLibs.rsp

@@ -1,0 +1,3 @@
+C:/Users/user/Documents/Git Siemens/TestCpp/TestTemplates/build/CMakeFiles/TestTemplates.dir
+C:/Users/user/Documents/Git Siemens/TestCpp/TestTemplates/build/CMakeFiles/edit_cache.dir
+C:/Users/user/Documents/Git Siemens/TestCpp/TestTemplates/build/CMakeFiles/rebuild_cache.dir
