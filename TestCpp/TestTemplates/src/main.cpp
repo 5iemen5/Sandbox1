@@ -4,6 +4,7 @@ template <typename T> void ShiftRight(std::vector<T> & vectorIN){
 
     if (vectorIN.size() == 0) {
         printf("Array empty!\n");
+        exit(5);
     }
 
     else{
@@ -50,64 +51,69 @@ public:
     void fillPrintInitArray(std::vector<int> & vector1, int argc, char * argv[]);
     void checkElement   (int argc, char * argv[]);
     void fillVector     (int argc, char * argv[]);
-}mainParam;
+} mainParam;
 
 void paramterWork::checkElement   (int argc, char * argv[]){
-        for (int i = 1; i < argc; i++) {
-            char* endptr;
+    if(argc < 2){
+        printf("Array empty!\n");
+        exit(5);
+    }
 
-            std::strtol(argv[i], &endptr, 10);
-            if (*endptr == '\0') { 
-                if (i > 1){
-                    if (detectedType != prevDetectedType){
-                        detectedType = DataType::Error;
-                        break;
-                    }
-                }
-                prevDetectedType = DataType::Integer;
-                continue; 
-            } // Successfully parsed as purely integer
+    for (int i = 1; i < argc; i++) {
+        char* endptr;
 
-            std::strtod(argv[i], &endptr);
-            if (*endptr == '\0') {
-
-                detectedType = DataType::Float; // Found a float
-
-                if (i > 1){
-                    if (detectedType != prevDetectedType){
-                        detectedType = DataType::Error;
-                        break;
-                    }
-                }
-                prevDetectedType = DataType::Float;
-                continue; 
-            }
-
-            // If both failed, it's a string. We can stop checking; everything must be treated as strings.
-            else {
-                detectedType = DataType::String;
-
-                if (i > 1){
-                    if (detectedType != prevDetectedType){
-                        detectedType = DataType::Error;
-                        break;
-                    }
-                }
-                prevDetectedType = DataType::String;
-            }
-
-            //Check if elements are same type
+        std::strtol(argv[i], &endptr, 10);
+        if (*endptr == '\0') { 
             if (i > 1){
                 if (detectedType != prevDetectedType){
                     detectedType = DataType::Error;
-                    
                     break;
                 }
             }
+            prevDetectedType = DataType::Integer;
+            continue; 
+        } // Successfully parsed as purely integer
 
-            prevDetectedType = detectedType;
+        std::strtod(argv[i], &endptr);
+        if (*endptr == '\0') {
+
+            detectedType = DataType::Float; // Found a float
+
+            if (i > 1){
+                if (detectedType != prevDetectedType){
+                    detectedType = DataType::Error;
+                    break;
+                }
+            }
+            prevDetectedType = DataType::Float;
+            continue; 
         }
+
+        // If both failed, it's a string. We can stop checking; everything must be treated as strings.
+        else {
+            detectedType = DataType::String;
+
+            if (i > 1){
+                if (detectedType != prevDetectedType){
+                    detectedType = DataType::Error;
+                    break;
+                }
+            }
+            prevDetectedType = DataType::String;
+        }
+
+        //Check if elements are same type
+        if (i > 1){
+            if (detectedType != prevDetectedType){
+                detectedType = DataType::Error;
+                
+                break;
+            }
+        }
+
+        prevDetectedType = detectedType;
     }
+}
 void paramterWork::fillVector     (int argc, char * argv[]){
 
     if(detectedType == DataType::Error){

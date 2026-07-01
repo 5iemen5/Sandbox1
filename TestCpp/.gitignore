@@ -1,0 +1,22 @@
+# CMake / Make build directories in each test project
+*/build/
+*/CMakeFiles/
+
+# CMake / Make generated files in project folders
+*/CMakeCache.txt
+*/cmake_install.cmake
+*/compile_commands.json
+*/Makefile
+*/build.ninja
+*/.ninja_deps
+*/.ninja_log
+
+# Compiler and linker outputs
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe

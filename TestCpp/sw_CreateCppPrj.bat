@@ -35,23 +35,23 @@ echo #set^(CMAKE_C_COMPILER "cl"^)
 echo.
 echo project^( %NAME% ^)
 echo.
-echo add_executable^( ${PROJECT_NAME} ./src/main.cpp include/main.h ^)
+echo add_executable^( ${PROJECT_NAME} ./src/main.cpp include/main.hpp ^)
 echo.
 echo target_include_directories^( ${PROJECT_NAME} PRIVATE include ^)
 ) > "%NAME%\CMakeLists.txt"
 
-:: 3. Create include/main.h
-echo Generating include/main.h...
+:: 3. Create include/main.hpp
+echo Generating include/main.hpp...
 (
 echo #pragma once
 echo.
 echo // Add declarations here
-) > "%NAME%\include\main.h"
+) > "%NAME%\include\main.hpp"
 
 :: 4. Create src/main.cpp
 echo Generating src/main.cpp...
 (
-echo #include "main.h"
+echo #include "main.hpp"
 echo.
 echo int main^(^) {
 echo.    
@@ -93,12 +93,12 @@ echo mkdir build
 :: Project opening scripts
 (
 echo #!/bin/bash
-echo code src/main.cpp include/main.h CMakeLists.txt
+echo code src/main.cpp include/main.hpp CMakeLists.txt
 ) > "%NAME%\sl_OpenPrj.sh"
 
 (
 echo @echo off
-echo code src/main.cpp include/main.h CMakeLists.txt
+echo code src/main.cpp include/main.hpp CMakeLists.txt
 ) > "%NAME%\sw_OpenPrj.bat"
 
 echo.
