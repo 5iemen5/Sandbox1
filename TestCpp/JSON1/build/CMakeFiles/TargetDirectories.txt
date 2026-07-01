@@ -1,0 +1,3 @@
+C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1/build/CMakeFiles/JSON1.dir
+C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1/build/CMakeFiles/edit_cache.dir
+C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1/build/CMakeFiles/rebuild_cache.dir

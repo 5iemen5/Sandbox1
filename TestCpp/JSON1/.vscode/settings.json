@@ -1,0 +1,11 @@
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/include",
+    "C:/Users/user/Documents/Libraries/cjson"
+  ],
+  "C_Cpp.intelliSenseEngine": "default",
+  "cmake.configureSettings": {
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+  }
+}

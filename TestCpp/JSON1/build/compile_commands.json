@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1/build",
+  "command": "C:\\Users\\user\\Downloads\\w64devkit\\w64devkit\\bin\\g++.exe  @CMakeFiles/JSON1.dir/includes_CXX.rsp  -o CMakeFiles\\JSON1.dir\\src\\main.cpp.obj -c \"C:\\Users\\user\\Documents\\Git Siemens\\Sandbox1\\TestCpp\\JSON1\\src\\main.cpp\"",
+  "file": "C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1/src/main.cpp",
+  "output": "CMakeFiles/JSON1.dir/src/main.cpp.obj"
+}
+]
