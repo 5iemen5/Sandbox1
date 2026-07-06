@@ -95,7 +95,7 @@ JSON1_EXTERNAL_OBJECTS =
 
 JSON1.exe: CMakeFiles/JSON1.dir/src/main.cpp.obj
 JSON1.exe: CMakeFiles/JSON1.dir/build.make
-JSON1.exe: C:/Users/user/Documents/Libraries/cjson/build/libcjson.a
+JSON1.exe: C:/Users/user/Documents/Git\ Siemens/Sandbox1/TestCpp/JSON1\\libs\\libcjson.a
 JSON1.exe: CMakeFiles/JSON1.dir/linkLibs.rsp
 JSON1.exe: CMakeFiles/JSON1.dir/objects1.rsp
 JSON1.exe: CMakeFiles/JSON1.dir/link.txt

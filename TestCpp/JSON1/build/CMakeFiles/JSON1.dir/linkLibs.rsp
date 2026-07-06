@@ -1,1 +1,1 @@
- C:/Users/user/Documents/Libraries/cjson/build/libcjson.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ "C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1\libs\libcjson.a" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

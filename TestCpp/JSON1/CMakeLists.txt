@@ -4,8 +4,18 @@ option(DONOTHING "TEMP OPTION: DO NOTHING, DON'T COMPILE" 0)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+#===========================================================
+#============ Libraries paths ==============================
+
+
+#set(cjson_lib_path "C:/Users/user/Documents/Libraries/cjson/build/libcjson.a")
+
+# UPD1. Moved cJSON static lib relative to ${CMAKE_CURRENT_LIST_DIR}:
+set(cjson_lib_path "${CMAKE_CURRENT_LIST_DIR}\\libs\\libcjson.a")
 set(cjson_include_path "C:/Users/user/Documents/Libraries/cjson")
-set(cjson_lib_path "C:/Users/user/Documents/Libraries/cjson/build/libcjson.a")
+
+
+#===========================================================
 
 if(OPTION1)
 
@@ -38,5 +48,12 @@ message("-- Linking cJSON")
 target_include_directories(${PROJECT_NAME} PRIVATE ${cjson_include_path})
 
 target_link_libraries(${PROJECT_NAME} ${cjson_lib_path})
+
+# # Add JSON precompiled shared library
+# message("-- Linking Mosquitto API")
+
+# target_include_directories(${PROJECT_NAME} PRIVATE ${cjson_include_path})
+
+# target_link_libraries(${PROJECT_NAME} ${cjson_lib_path})
 
 endif()

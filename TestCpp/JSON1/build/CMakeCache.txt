@@ -14,14 +14,8 @@
 # EXTERNAL cache entries
 ########################
 
-//Path to cJSON headers
-CJSON_INCLUDE_DIR:PATH=C:/Users/user/Documents/Libraries/cjson
-
-//Path to cJSON static library
-CJSON_LIBRARY:FILEPATH=C:/Users/user/Documents/Libraries/cjson/build/libcjson.a
-
-//Path to cJSON source/build root
-CJSON_ROOT:PATH=C:/Users/user/Documents/Libraries/cjson
+//No help, variable specified on the command line.
+CJSON_INCLUDE_DIR:UNINITIALIZED=C:\\Users\\user\\Documents\\Libraries\\cJSON
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Users/user/Downloads/w64devkit/w64devkit/bin/addr2line.exe
@@ -259,6 +253,9 @@ JSON1_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 JSON1_SOURCE_DIR:STATIC=C:/Users/user/Documents/Git Siemens/Sandbox1/TestCpp/JSON1
+
+//No help, variable specified on the command line.
+WITH_STATIC_LIBRARIES:UNINITIALIZED=ON
 
 
 ########################
